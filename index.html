@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ACEpirit</title>
+	<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/w3.css">
+	<link rel="stylesheet" type="text/css" href="../css/acepirit.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  
+	body
+	{
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		background:#bdb8e0;
+		opacity: 0.9;
+	}
+	.header
+	{
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		height: 100%;
+	}
+
+		.upper
+		{
+			background-color:#5c1e7b;
+			padding: 10px;
+			height: 12vh;
+			color: white;
+		}
+
+		.fa-phone,.fa-envelope-o
+		{
+			position: relative;
+			text-decoration: none;
+			margin-left: 60px;
+		}
+				.fa-envelope-o
+		{
+			margin-left: 0px;
+		}
+
+
+		.fa-phone::after 
+		{
+			content: " | ";	
+			text-decoration: none;	
+		}
+		.fa-facebook,.fa-twitter,.fa-google,.fa-search
+		{
+			float: right;
+			margin-left: 30px;
+			text-decoration: none;
+		}
+		.middle
+		{
+			background: white;
+			margin-top: -15px;
+			margin-left: 30px;
+			height: 15vh;
+
+		}
+		.middle img
+		{
+
+		width: 14%;
+		height: 15vh;
+		margin: 0px;
+		}
+		.middle span
+		{
+			font-size: 30px;
+			font-style: oblique;
+			color: 		#A52A2A;
+		}
+
+		.search
+		{
+			background: #3d1452;
+			margin-top: 10px;
+			height: 9vh;
+			display: none;
+			margin: 0px;
+			padding: 0px;
+		}
+		.search input
+		{
+			width: 50%;
+			height: 40px;
+			border: none;
+			outline: none;
+			color: black;
+			margin-left: 350px;
+			border-radius: 10px;
+			margin-top: 10px;
+
+		}
+		::placeholder
+		{
+			font-size: 30px;
+		text-align: center;
+		}
+	
+		.fa-search
+		{
+			cursor: pointer;
+		}
+		.lower{
+		padding: 0px;
+		height: 40px;
+		font-size: 15px;
+		background: #3d1452;
+		position: absolute;
+		}
+		ul{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+
+
+		}
+		 li{
+			float: left;
+			width: 150px;
+			height: 100%;
+			opacity: 1;
+			line-height: 40px;
+			text-align: center;
+			margin-right: 0px;
+			background: #3d1452;
+			border-left: 1px solid black;
+			z-index: 1;
+			position:relative;
+			cursor: pointer;
+		}
+		ul li a{
+			text-decoration: none;
+			color: white;
+			display: block;
+			cursor: pointer;
+			border: none;
+			position: relative;
+
+		}
+		ul li a:hover{
+		background-color: white;
+		color: black;
+
+		}
+		ul li ul li{
+			display: none;
+		}
+		ul li:hover ul li {
+			display: block;
+			z-index: 2;
+			border-left: none;
+		
+		}
+		.mySlides
+		{
+			position: relative;
+		}
+
+		.lower
+		{
+			margin-top: -15px;
+			width: 100%;
+			z-index: 1;
+		}
+		.sticky
+		{
+			border-right: 2px;
+			position: fixed;
+			top: 2.3%;
+			left: 0;
+			height: 7vh;
+			width: 100%;
+		}
+		.lower span
+		{
+			color: white;
+		}
+.w3-content
+{
+  padding: 0px;
+  margin: 0px;
+}
+
+ .mySlides p
+{
+position:relative;
+top: -300px;
+color: 	#FFFAF0;
+font-size: 30px;
+font-size: 50px;
+text-align: center;
+margin-left: 300px;
+}
+.w3-content img
+{
+	margin-top:-16px;
+  	height: 90vh;
+  	width: 230vh;
+}
+.lower label
+{
+	position: relative;
+	color: white;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 28px;
+	display: none;
+	cursor: pointer;
+}
+#toggle
+{
+	display: none;
+}
+#scrollToTop{
+	font-size: 45px;
+}
+@media only screen and (max-height: 1400px)
+{
+	.header .upper
+		{
+			height: 6vh;
+		}
+}
+@media only screen and (max-height: 800px)
+{
+	.header .upper
+		{
+			height: 11vh;
+		}	
+}
+	@media only screen and (max-width: 800px)
+{
+			.header .w3-content .mySlides img 
+		{
+			width: 100%;
+			height: 60vh;
+		}
+}
+@media only screen and (max-width: 1100px)
+{
+	.middle
+	{
+		height: 7vh;
+	}
+	.header .middle .mp
+	{
+		width: 10%;
+		height: 6vh;
+	}
+	.header .search
+	{
+		width: 100%;
+		margin:0 auto;
+		height: 3vh;
+	}
+	.header .search input
+		{
+			width: 100%;
+			height: 30px;
+			outline: none;
+			color: black;
+			margin: 0 auto;
+			border-radius: 0px;
+			margin-top: 5px;
+
+		}
+		.header .search ::placeholder
+		{
+			font-size: 20px;
+		}
+		.upper
+		{
+			height: 8vh;
+		}
+		.header .upper .fa-phone,.fa-envelope-o
+		{
+			position: relative;
+			text-decoration: none;
+			margin-left:0px;
+		}
+		.header .upper .fa-facebook,.fa-twitter,.fa-google,.fa-search
+		{
+
+		margin-top: 20px auto;
+		float: none;
+		}
+		.lower label
+		{
+			display: block;
+		}
+		.menu li{
+			color: black;
+			margin-top: -1%;
+			float:center;
+			width: 100%;
+			display: none;
+		}
+		.sticky
+		{
+			position: unset;
+			height: 0vh;
+		}
+		 #toggle
+		 {
+		 	display: none;
+		 }
+		 
+	#toggle:checked +.menu li
+    {
+    	display: block;
+    	margin-right: 40px;
+    }
+    .w3-content 
+    {
+    	width: 100%;
+    }
+
+.w3-content .mySlides img 
+{
+	width: 104.5%;
+	height: 40%;
+}
+
+		.w3-content .mySlides p
+		{
+		position: relative;
+		color: 	#FFFAF0;
+		font-size: 30px;
+		margin: 0 auto;
+		top:-200px;
+		}
+}
+@media only screen and (max-width: 600px)
+{
+	.header .middle
+	{
+		height: 6vh;
+	}
+	.header .upper
+	{
+		height: 12vh;
+	}
+ .header .w3-content .mySlides img 
+	{
+	width: 100%;
+	height: 70vh;
+	}
+.header .w3-content .mySlides p
+		{
+			font-size: 20px;
+
+		}
+
+}
+
+.facility
+{
+	width: 100%;
+	margin-top: -270px;
+	height: 25vh;
+	
+}
+
+.service_content
+{
+	margin: 40px;
+	padding: 0px;
+}
+.service_content h2
+{
+	position: relative;
+	text-align: center;
+	color: white;
+	margin: 0px;
+	font-size: 35px;
+	top: -50px;
+}
+.service_content h2 a
+{
+	background:rgba(0,0,0,0.5);
+	border-bottom: 2px solid white;
+	border:1px solid white;
+	border-radius: 15px;
+}
+.services
+{
+	background: #DCDCDC;
+	width: 300px;
+	height: 250px;
+	margin-left: 20px;
+	margin-top: 10px;
+	font-size: 15px;
+	float: left;
+	padding:15px;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+.services img
+{
+	width: 100px;
+	height: 90px;
+	margin-left: 70px;
+}
+.services h2
+{
+	font-size: 18px;
+}
+.services p
+{
+	font-size: 12px;	
+}
+
+@media only screen and (max-width: 1100px)
+{
+	
+	.facility
+{
+	position: relative;
+	margin-top: 50px;
+	width: 100%;
+	height: 180vh;
+	}
+	.facility .services {
+
+	width: 50%;
+	height: 355px;
+	margin:0 auto;
+	font-size: 15px;
+	float: left;
+	padding:15px;
+	border-right: 8px solid white;
+	border-bottom: 8px solid white;
+	margin-top: 5px;
+}
+.services img
+{
+	width: 70px;
+	height: 60px;
+	margin-left: 70px;
+}
+}
+
+.who
+{
+	box-shadow: 10px solid red;
+	padding: 10px;
+	margin-top: 600px;
+  background: url(../images/bag.jpg);
+	height: 85vh;
+	color: white;
+	 background-attachment: fixed;
+}
+.who h1 
+{
+	text-align: center;
+}
+.who h1 a 
+{
+	border-bottom: 2px solid white; 
+}
+.abt
+{
+	padding: 10px;
+	text-align: center;
+	width: 40%;
+	font-size: 20px;
+	float:right;
+	margin-right: 100px;
+}
+@media only screen and (max-width: 1100px)
+{
+	.who
+	{
+		position: relative;
+		top: -200px;
+	}
+}
+@media only screen and (max-width: 1050px)
+{
+	.who
+	{
+		position: relative;
+		height: 110vh;
+		top: -200px;
+
+	}
+	.who .abt
+	{
+		float: none;
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 600px)
+{
+	.who
+	{
+		height: 130vh;
+	}	
+	.who h1 
+{
+	text-align: center;
+	font-size: 30px;
+}
+.who h2
+{
+	font-size: 25px;
+}
+.who p
+{
+	font-size: 15px;
+}
+
+}
+
+.portfolio
+{
+  background: url(../images/portfolio1.jpeg);
+  background-size: cover;
+  font-style: all;
+  background-position: all;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  margin-top: 100px;
+}
+.portfolio h2
+{
+  text-align: center;
+  font-size: 40px;
+  color: brown;
+}
+.portfolio h2 a
+{
+border-bottom: 2px solid brown;
+
+}
+.container {
+  position: relative;
+  float: left;
+  margin-left: 120px;
+  top: 10%;
+}
+
+.image {
+  display: block;
+  height: auto;
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+    transition: 1s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  color: gray;
+  background-color: #008CBA;
+}
+
+.container:hover  {
+  opacity: 1;
+  display: block;
+  transform: scale(1.1);
+  border-radius: 10px;
+   width: 500px;
+  height: 400px;
+
+
+}
+.container:hover .overlay  {
+  opacity: 0.5;
+  display: block;
+  border-radius: 10px;
+
+}
+
+.text {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 1100px)
+{
+	.portfolio
+ {
+ 	position: relative;
+	height: 180vh;
+top: -295px;
+
+ }
+ .portfolio .container
+ {
+ 	float: none;
+ 	margin-top: 30px;
+ 	margin-left: 200px;
+ }
+
+}
+@media only screen and (max-width: 600px)
+{
+
+ .portfolio .container
+ {
+ 	margin-left: 0px;
+ }
+	.container .image
+	{
+		width: 330px;
+	}
+}
+
+
+.test
+{
+	width: 200px;
+	margin: 0 auto;
+	float: left;
+}
+.test img
+{
+	border-radius: 50%;
+}
+.testimonials
+{
+	margin-top: -1%;
+  background: url(../images/testimonial.jpg);
+  background-attachment: fixed;
+  height: 80vh;
+  margin-top: 100px;
+}
+  .w3-content_testimonial
+  {
+    width: 70%;
+    background: url(../images/parallex.png);
+    margin: 0 auto;
+    top: 5%;
+  }
+  .w3-content_testimonial img
+  {
+    
+    position: relative;
+    width: 70px;
+    height: 70px; 
+    border-radius: 50%;
+    margin:0 auto;
+    top: 40px;
+  }
+  .testimonial_Slides 
+  {
+    display: block;
+    border-radius: 15px;
+    width: 100%;
+    height: 60vh;
+    text-align: center;
+    color: white;
+    background-color:rgba(0,0,0,0.3);
+    padding: 10px;
+  }
+   .testimonial_Slides p
+   {
+    position: relative;
+    text-align: center;
+    top: 20%;
+   }
+   .testimonial_Slides h2
+   {
+    position: relative;
+    top: 40px;
+   }
+   .btn
+   {
+    position: relative;
+    top: 80px;
+    cursor: pointer;
+    height: 6vh;
+    border-radius: 10PX;
+  background:   #00FFFF;
+  border: none;
+  border: none;
+   }
+.testimonials h1
+{
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.testimonials h1 a
+{
+	text-align: center;
+	border-bottom: 2px solid white;
+}
+.w3-button
+{
+	background: rgba(0,0,0,0);
+	font-size: 20px;
+}
+@media only screen and (max-width: 1100px)
+{
+		.testimonials
+  {
+  	position: relative;
+  	top: -370px;
+  	height: 120vh;
+  }
+}
+@media only screen and (max-width: 700px)
+{
+	.testimonials
+  {
+  	position: relative;
+  }
+ .testimonials .testimonial_Slides
+ {
+ 	height: 85vh;
+ 
+ }
+ .testimonial_Slides .btn
+   {
+   	top: 70px;
+   	height: 6.5vh;
+   }
+   .w3-button
+{
+	top: 200px;
+}
+.testimonial_Slides p
+   {
+    position: relative;
+    text-align: center;
+    top: 10%;
+   }
+
+}
+
+.contact
+{
+	position: relative;
+	margin-top: 10px;
+	margin: 0 auto;
+	padding: 10px;
+	width:100%;
+	background:url(../images/contactUs.jpg);
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	color:white;
+	opacity: 1;
+}
+
+.contact h1
+{
+	position:relative;
+text-align: center;
+
+}
+.contact .fn ,.ln
+{
+	float: left;
+}
+.for input
+{
+	margin-top: 5px;
+	width: 400px;
+	margin-left: 10px;
+	height: 35px;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+}
+.for p
+{
+margin: 10px;
+font-size: 20px;	
+} 
+.for .msg
+{
+
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 10%;
+}
+.btn2
+{
+	width: 29%;
+	font-size: 20px;
+	margin-left: 10px;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 10px;
+	border:none;
+	background:hsl(248, 53%, 58%);
+}
+@media only screen and (max-width: 500px)
+{
+	.contact div input
+	{
+		width: 330px;
+	}
+	.contact div textarea
+	{
+		width: 330px;
+	}
+}
+@media only screen and (max-width: 1100px)
+{
+	.contact
+	{
+		position: relative;
+		top: -300px;
+	}
+
+}
+@media only screen and (max-width: 900px)
+{
+	.contact
+	{
+		position: relative;
+		top: -300px;
+	}
+	.contact .fn ,.ln
+{
+	float: none;
+}
+.contact .email
+{
+	position: absolute;
+	top: 39%;
+}	
+	
+}
+@media only screen and (max-width: 1100px)
+{
+	.map_sec
+	{
+		position: relative;
+		margin-top: -270px;
+
+	}
+}
+footer
+{
+	font-size: 15px;
+	padding: 10px;
+	height: 33vh;
+	margin-top: -5px;
+	background: rgba(0,0,0,0.8);
+	opacity: 0.7;
+}
+footer span
+{
+	margin-left: 100px;
+}
+footer article
+{
+
+	float: left;
+	color: white;
+
+}
+.footer_address
+{
+	margin-left: 350px;
+	width: 300px;
+	height: 100%;
+	border-right: 1px solid white;
+	padding: 0px;
+	color: white;
+}
+.follow 
+{
+
+	margin-left: 30px;
+	text-align: center;
+}
+.follow h3
+{
+	margin-left: 10px;
+}
+.follow .fa{
+	font-size: 25px;
+}
+.footer_last
+{
+	position: relative;
+	text-align: center;
+	background: rgba(0,0,0,1);
+	color:white;
+	height: 60px;
+	padding: 5px;
+	opacity: 0.9;
+}
+.footer_last h3
+{
+font-size: 20px;
+}
+@media only screen and (max-width: 1100px)
+{
+	footer .footer_address,.follow
+	{
+
+	float: none;
+	color: white;
+
+	}
+footer
+{
+	font-size: 15px;
+	padding: 10px;
+	height: 58vh;
+	margin-top: -5px;
+	background: rgba(0,0,0,0.8);
+	opacity: 0.7;
+}
+	.footer_address
+{
+	margin: 0px;
+	border-right: none;
+}
+footer span
+{
+	margin-left: 200px;
+}
+.footer_last 
+{
+	opacity: 1;
+	background: black;
+}
+.follow
+{
+	margin: 0px;
+	position: absolute;
+	margin-top: -90px;
+	margin-left: 0px;
+
+}
+}
+@media only screen and (max-width: 600px)
+{
+		footer
+{
+	position: relative;
+	height: 60vh;
+	top: 0px;
+}
+footer span
+{
+	margin-left: 100px;
+}
+.footer_last 
+{
+	top: 0px;
+	height: 100%;
+}
+
+	}
+.fa-arrow-circle-up
+{
+	font-size: 3em;
+	color: #446CB3;
+	position: fixed;
+	right: 48px;
+	bottom:10%;
+	transition: all 0.5s ease;
+	z-index: 1;
+}
+#scrollToTop:hover .fa-arrow-circle-up
+{
+	transform: scale(1.1,1.1);
+	transition: all 0.5s ease;
+
+}
+
+.hide
+{
+	transform: scale(0,0);
+
+	display: none;
+} 
+  </style>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="..css/animate.css">
+	<script type="text/javascript">
+		//serach scroll
+		$(document).ready(function(){
+			$('.fa-search').click(function(){
+				$('.search').slideToggle()
+			})
+		})
+		$(window).scroll(function(){
+			if($(this).scrollTop()>150){
+				$('.lower').addClass("sticky");
+			}
+			else
+			{
+				$('.lower').removeClass("sticky");
+			}
+		})
+		//--Button control--//
+$(document).scroll(function(e){
+	var scrollpos= $(this).scrollTop();
+	if (scrollpos<300){
+		$('#scrollToTop').addClass('hide');
+	}
+	else
+	{
+		$('#scrollToTop').removeClass('hide');
+	}
+})
+	</script>
+
+</head>
+<body>
+	<section class="header">
+			<div class="middle">
+				<p><img src="../images/acepirit.jpg" class="mp w3-animate-down"></p>
+			</div>
+			<div class="search">
+				<input type="" name="" placeholder="search">
+			</div>
+			<div class="upper">
+				<a target="_blank" href="tel:9867693035" class="fa fa-phone"> <span>Call 9867693035</span></a>
+				<a target="_blank" href="tel:9867693035" class="fa fa-envelope-o"> <span>subedijames@gmail.com</span></a>
+				<i href="" class="fa fa-search"></i>
+				<a href="http://www.twiter.com" class="fa fa-twitter"></a>
+				<a href="http://www.gogle.com" class="fa fa-google"></a>
+				<a href="http://www.facebook.com" class="fa fa-facebook"></a>
+			</div>
+ <div class="lower">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle">
+        <ul class="menu">
+          <li><a>Home</a></li>
+    <li><a>About us <span>&emsp; &#8744;</span></a>
+      <ul>
+        <li><a>company</a></li>
+        <li><a>work</a></li>
+        <li><a>services</a></li>
+        <li><a>more</a></li>
+      </ul>
+    </li>
+    <li><a>Portfolio <span>&emsp; &#8744;</span></a>
+      <ul>
+        <li><a>pictures</a></li>
+        <li><a>skills</a></li>
+        <li><a>oprojects</a></li>
+        <li><a>programs</a></li>
+      </ul>
+    </li>
+    <li><a>Our team <span>&emsp; &#8744;</span></a>
+        <ul>
+        <li><a>main</a></li>
+        <li><a>side</a></li>
+        <li><a>branch</a></li>
+        <li><a>lower</a></li>
+      </ul>
+    </li>
+    <li><a>Contact us <span>&emsp; &#8744;</span></a>
+      <ul>
+        <li><a>map</a></li>
+        <li><a>main</a></li>
+        <li><a>side</a></li>
+        <li><a>branch</a></li>
+        <li><a>lower</a></li>
+      </ul>
+       </li>
+    <li><a>FAQ</a></li>
+        </ul>
+    </div>
+<div class="w3-content w3-section">
+  <div class="mySlides">
+  <img src="../images/1.jpg" class="w3-animate-left">
+  <p class="w3-animate-left">Connecting Thw world And Technology</p>
+  </div>
+ <div class="mySlides">
+  <img src="../images/2.jpg" class="w3-animate-left">
+  <p class="w3-animate-left">Empowering The Internet Generation </p>
+  </div>
+  <div class="mySlides">
+  <img src="../images/4.jpg" class="w3-animate-left">
+  <p class="w3-animate-left">When Actually Make It Happend</p>
+  </div>
+</div>
+</section>
+<a href="" id="scrollToTop" class="hide"><i class="fa fa-arrow-circle-up"></i></a>
+
+<section class="facility">
+<div class="service_content">
+		<h2><a>Our Services</a></h2>
+</div>
+<article class="art1">
+<div class="services w3-animate-left">
+	<img src="../images/web.png">
+	<h2>Website Developemnt</h2>
+	<p>Acepirit Pvt.Ltd is team of highly qualified and professional whose sole objective is to offer a wide range services to our clients throughout the world.</p>
+</div>
+<div class="services w3-animate-left">
+	<img src="../images/cr.png">
+	<h2>Content Writing</h2>
+	<p>Content Writing is another important aspects to generate traffic to you website as it directly affects the quality of your products.</p>
+</div>
+<div class="services w3-animate-right">
+	<img src="../images/ma.png">
+	<h2>Mobile App Development</h2>
+	<p> We develop Android as well as IOS mobile apps with great UI design and efficient for your work to use.Nowdays,Every business sector requires mobile apps.</p>
+</div>
+<div class="services w3-animate-right">
+	<img src="../images/gr.png">
+	<h2>Graphic Design</h2>
+	<p>We also offer graphics design services to our clients.We have the best graphics designer available in the market.</p>
+</div>
+<div class="services w3-animate-left">
+	<img src="../images/seo.png">
+	<h2>Search Engine Optimization</h2>
+	<p>We have qualified personnel to provide you the best Search Engine Optimization service in K-town.</p>
+</div>
+<div class="services w3-animate-left">
+	<img src="../images/sm.png">
+	<h2>Social Media Marketing</h2>
+	<p>Marketing of your company in social media is the most popular choice for digital marketing.</p>
+</div>
+<div class="services w3-animate-right">
+	<img src="../images/dr.png">
+	<h2>Website Developemnt</h2>
+	<p>Acepirit Pvt.Ltd is team of highly qualified and professional whose sole objective is to offer a wide range services to our clients throughout the world.</p>
+</div>
+<div class="services w3-animate-right">
+	<img src="../images/app.png">
+	<h2>Web Applicationn Development</h2>
+	<p>Web Application Development is the one of the fastest growing sector in the world. Nowdays ,even to start a small business we need prototype of the respective idea.</p>
+</div>
+</article>
+</section>
+<section class="who">
+	<h1><a><marquee>About Us</marquee></a></h1>
+	<div class="abt">
+		<h2>What is our purpose, vision and mission?</h2>
+		<p>“Customers will never love a company until the employees love it first.” thats our motive.We have a vision to develop the community by technological means.Our main mission is to provide the best services to our customers so that we could establish a good relation with them and opportunity to develop our company in international level as well.</p>
+	</div>
+	<div class="abt">
+		<h2>Who Is Acepirit?</h2>
+		<p>Acepirit is a software development company located in Kathmandu,Nepal.We have a highly qualified and experience team who are capable of providing you the best services in k-town. Your satisfaction and co-operation could provide us a great opportunity to uplift our business growth</p>
+	</div>
+</section>
+<section class="portfolio">
+<h2><a>Portfolio</a></h2>
+<div class="container">
+  <img src="../images/e-comerce.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">E-comerce website</div>
+ </div>
+</div>
+<div class="container">
+  <img src="../images/travell.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Traking & and tour website</div>
+  </div>
+</div>
+</section>
+<section class="testimonials"> 
+
+<h1 class="w3-center"><a>Testimonials</a></h1>
+
+<div class="w3-content_testimonial w3-display-container">
+
+	 <div class="testimonial_Slides">
+  <img src="../images/3.jpg" class="w3-animate-left">
+  <h2 class="w3-animate-left">Sambridhi Khadka</h2>
+  <p class="w3-animate-right">"They exhibited wonderful example of good costumer service,every business could take a valueable lesson from them.Great service ,friendly stuff,deliveryon time and every penny worth.There will be follow of odders.Thanks!"</p>
+   <button class="btn w3-animate-right">FOUNDER-ASIAN INFOTECH</button>
+  </div>
+	
+  <div class="testimonial_Slides">
+  <img src="../images/1.jpg" class="w3-animate-left">
+  <h2 class="w3-animate-left">Binaya Tensulkar</h2>
+  <p class="w3-animate-right">"I'd say the team are excellent and it is some of the best service I have received both online and offlinein a long time.If you would like a professional experience from an excellent company then I would suggest acepirit as best.They offer product at suitable cost which is an excellent combination"</p>
+  <button class="btn w3-animate-right">PROJ.MANEGER/SUNRISE INFOTECH</button>
+
+  </div>
+
+  <div class="testimonial_Slides">
+  <img src="../images/4.jpg" class="w3-animate-left">
+  <h2 class="w3-animate-left">Resham Gurung</h2>
+  <p class="w3-animate-right">"I just want to say thank you for the professional job that you did for my business.I will contineu using yousr services for sure becaise itis faster,very good price and done honestly."</p>
+   <button class="btn w3-animate-right">CEO-BESTINOVATIVE IT SOUTION</button>
+  </div>
+
+
+  <button class="w3-button  w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button  w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+</section>
+<section class="contact">
+	<h1>Contact Us</h1>
+	<div class="for">
+		<h2>Feel Free To Write Us </h2>
+			<P>you may send an email to acepirit@gmail.com.
+You can contact us for general enquiries via the form below:</P>
+			<div class="fn">
+				<p>first name*</p>
+				<input type="text" name="">
+			</div>
+			<div class="ln">
+				<p>last name*</p>
+				<input type="text" name="">
+			</div></br></br></br></br></br>
+			<div>
+				<div class="email">
+				<p>email</p>
+				<input type="text" name="">
+			</div>
+			<div class="phone">
+				<p>phone no</p>
+				<input type="text" name="">
+			</div>
+				<div class="msg">
+				<p>Message</p>
+				<textarea name="" id="ram" cols="40" rows="15" style="border-radius: 10px;"s ></textarea>
+			</div>
+			<button class="btn2">Submit</button>
+		</div>
+</section>
+<section class="map_sec">
+	<article class="map wow animated fadeInLeft"  id="5" >
+	<div >
+		<h1 class="mp1">Find Us On Map</h1>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5770494896915!2d85.326470714656!3d27.699464282795127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a4047e95c1%3A0x906957be0278a374!2sAnamnagar+Bus+Stop!5e0!3m2!1sen!2snp!4v1512929400115" width="100%" height="400" frameborder="0" style="border:0," allowfullscreen class="mp"></iframe>
+	</div>
+	</article>
+ </section>
+ <footer>
+ 	<article>
+ 	<div class="acepirit">
+ 		<p>&#187;privecy policy<span>&#187;Terms of use</span></p>
+ 		<p>&#187;Disclaimer&emsp;&emsp;<span>&#187;contact us</span></p>
+ 	</div>
+ 	<div class="acepirit">
+ 	</div>
+ 	</article>
+ 	<article class="footer_address">
+ 		<h3>Acepirit</h3>
+ 		<p>Address:4600 Anamnagar,
+Ghattekula, PO-4600 kathmandu</p>
+<p>Tel : 9867693035</p>
+<p>Fax : 781-498-2785</p>
+ 	</article>
+ 	<article class="follow">
+ 		<h3>Follow us on</h3>
+ 				<a href="http://www.twiter.com" class="fa fa-twitter"></a>
+				<a href="http://www.gogle.com" class="fa fa-google"></a>
+				<a href="http://www.facebook.com" class="fa fa-facebook"></a>
+ 	</article>
+</footer>
+<section class="footer_last">
+ 		<h3>© 2017 Acepirit Pvt.Ltd. | All Rights Reserved.</h3>
+ 	</section>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+var testimonialslideIndex = 1;
+showDivs(testimonialslideIndex);
+
+function plusDivs(n) {
+  showDivs(testimonialslideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("testimonial_Slides");
+  if (n > x.length) {testimonialslideIndex = 1}    
+  if (n < 1) {testimonialslideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[testimonialslideIndex-1].style.display = "block";  
+}
+$(document).on('click','#scrollToTop',function(){
+	$('html,body').animate({scrollTop:0},1000);
+	return false;
+})
+
+</script>
+</body>
+</html>
